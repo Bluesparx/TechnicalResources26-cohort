@@ -1,16 +1,20 @@
 #include<iostream>
 using namespace std;
 
+int count(int n){
+    int dig=0;
+    while(n>0){
+        dig++;
+        n=n/10;
+    }
+    cout<<"No. of digits = ";
+    return dig;
+}
+
 int main(){
-    int digits=0, num;
+    int num;
     cout<<"Enter number = ";
     cin>>num;
-    do{
-        digits++;
-        num=num/10;
-    }
-    while (num>0);
-    cout<<"No. of digits = ";
-    cout<<digits;
+    cout<<count(num);
     return 0;
 }
